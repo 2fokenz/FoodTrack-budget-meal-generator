@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodLink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="app-header">
+      <h1>FoodLink</h1>
+      <p>Affordable, nutritious Filipino ulam based on your exact cash on hand.</p>
+    </header>
+
+    <div class="card form-card">
+      <div class="input-group">
+        <label for="totalBudget">Total Cash Available (₱):</label>
+        <input type="number" id="totalBudget" placeholder="e.g. 200" min="1">
+      </div>
+
+      <div class="input-group">
+        <label for="headcount">Number of Diners (Headcount):</label>
+        <input type="number" id="headcount" placeholder="e.g. 4" min="1">
+      </div>
+
+      <button id="generateBtn" onclick="generateMeals()">Generate Meals</button>
+    </div>
+
+    <div id="allowanceBadge" class="allowance-badge hidden"></div>
+
+    <div id="recipeContainer" class="results-container"></div>
+
+    <footer class="app-footer">
+      <p><em>*Prices are estimates based on baseline Department of Agriculture (DA) Bantay Presyo market rates.</em></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
